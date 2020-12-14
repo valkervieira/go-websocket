@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 ) 
 
@@ -21,5 +22,5 @@ func setupRoutes() {
 func main() {
 
 	setupRoutes()
-	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
